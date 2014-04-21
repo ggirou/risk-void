@@ -1,0 +1,18 @@
+application: Vane Chat
+version: 1
+deploy: true
+pub: true
+dart2js: true 
+
+handlers:
+- url: /ws
+  match: exact 
+  script: chat.dart
+  controller: Chat
+  
+# Static content  
+- url: /
+  match: postregex
+  static_dir: web
+
+  
