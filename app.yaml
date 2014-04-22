@@ -8,7 +8,7 @@ handlers:
 - url: /ws
   match: exact 
   script: chat.dart
-  controller: Chat
+  handler: Chat
   
 # Static content  
 - url: /
