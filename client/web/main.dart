@@ -37,8 +37,8 @@ class ChatController {
     // Collect messages from the stream
     ws.onMessage.listen((e) { 
       messages.add(new Message.fromJson(JSON.decode(e.data)));
+      chatBox.children.forEach((child) => chatBox.scrollByLines(chatBox.scrollHeight));
     });
-    
   }
   
   // Send message on the channel
