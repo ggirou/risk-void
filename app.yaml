@@ -10,7 +10,7 @@ handlers:
   script: chat.dart
   handler: Chat
   
-# Static content  
+# Static content, will be served by your app's Nginx instance 
 - url: /
   match: postregex
   static_dir: web
