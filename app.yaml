@@ -15,7 +15,6 @@ handlers:
 
 # Equivalent longer config for the Dart handler above  
 #- url: /ws
-#  match: exact 
 #  script: chat.dart
 #  handler: Chat
  
