@@ -11,7 +11,7 @@ class Chat extends Vane {
     StreamSubscription conn = ws.listen(null);
 
     // Set ping interval to prevent disconnection from peers 
-    ws.pingInterval = new Duration(minutes: 1);
+    ws.pingInterval = new Duration(seconds: 5);
     
     // Add all incomming message to the chatStream
     conn.onData((msg) {
