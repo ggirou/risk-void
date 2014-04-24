@@ -1,11 +1,17 @@
+import 'dart:io';
 import 'dart:async';
 import 'package:vane/vane.dart';
 
+// Create a broadcast channel to share messages
 StreamController channel = new StreamController.broadcast();
 
 class Chat extends Vane {
   Future main() {
-    var conn = ws.listen(null);
+    // Start listening to websocket connection
+    StreamSubscription conn = ws.listen(null);
+
+    // Set ping interval to prevent disconnection from peers 
+    ws.pingInterval = new Duration(seconds: 5);
     
     // Add all incomming message to the chatStream
     conn.onData((msg) {

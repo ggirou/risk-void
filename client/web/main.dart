@@ -28,7 +28,7 @@ class ChatController {
   ChatController() {
     // Initialize Websocket connection
     ws = new WebSocket("ws://${window.location.hostname}/ws");
-    
+
     // Listen for Websocket events
     ws.onOpen.listen((e)    => print("Connected"));
     ws.onClose.listen((e)   => print("Disconnected"));
@@ -37,8 +37,8 @@ class ChatController {
     // Collect messages from the stream
     ws.onMessage.listen((e) { 
       messages.add(new Message.fromJson(JSON.decode(e.data)));
+      chatBox.children.forEach((child) => chatBox.scrollByLines(chatBox.scrollHeight));
     });
-    
   }
   
   // Send message on the channel

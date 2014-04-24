@@ -24,6 +24,11 @@ body {
   text-align: center;
 }
 
+.form-legend {
+  font-size: 3em;
+  font-weight: bold;
+}
+
 .well {
   background-color: #fff;
   padding: 1em;
@@ -33,12 +38,11 @@ body {
 }
 
 #chat-box {
-  padding: 10px;
   position: absolute;
-  top: 0;
+  top: 1em;
   left: 0;
   right: 0;
-  bottom: 120px;
+  bottom: 10em;
   overflow: auto;
 }
 
@@ -48,7 +52,14 @@ body {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 0;
-  padding: 10px;
+  bottom: 1em;
+}
+
+.ng-hide {
+  display: none;
+}
+
+[ng-cloak] {
+  display: none;
 }
 
