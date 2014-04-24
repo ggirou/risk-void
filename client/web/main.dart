@@ -28,7 +28,7 @@ class ChatController {
   ChatController() {
     // Initialize Websocket connection
     ws = new WebSocket("ws://${window.location.hostname}/ws");
-    
+
     // Listen for Websocket events
     ws.onOpen.listen((e)    => print("Connected"));
     ws.onClose.listen((e)   => print("Disconnected"));
