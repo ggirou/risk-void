@@ -1,20 +1,19 @@
-application: Vane Chat
+application: Risk Game
 version: 1
 deploy: true
 pub: true
-dart2js: true 
+dart2js: true
 
 handlers:
 - url: /ws
-  handler: chat.dart:Chat
-  
-# Static content, will be served by your app's Nginx instance 
+  handler: risk.dart:Risk
+
+- url: /new
+  match: exact
+  script: risk.dart.dart
+  handler: NewGame
+
+# Static content, will be served by your app's Nginx instance
 - url: /
   match: postregex
   static_dir: web
-
-# Equivalent longer config for the Dart handler above  
-#- url: /ws
-#  script: chat.dart
-#  handler: Chat
- 

@@ -1,3 +1,5 @@
 name: server
 dependencies:
   vane: any
+  risk:
+    path: ../client
