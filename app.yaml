@@ -2,7 +2,7 @@ application: Risk Game
 version: 1
 deploy: true
 pub: true
-dart2js: true
+dart2js: false
 
 handlers:
 - url: /ws
@@ -16,4 +16,4 @@ handlers:
 # Static content, will be served by your app's Nginx instance
 - url: /
   match: postregex
-  static_dir: web
+  static_dir: build/web
