@@ -10,7 +10,7 @@ handlers:
 
 - url: /new
   match: exact
-  script: risk.dart.dart
+  script: risk.dart
   handler: NewGame
 
 # Static content, will be served by your app's Nginx instance
