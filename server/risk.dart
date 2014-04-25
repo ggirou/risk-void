@@ -19,7 +19,7 @@ class NewGame extends Vane {
   Future main() {
     riskServer = new RiskWsServer();
     log.info("New game");
-    return close();
+    return redirect("/");
   }
 }
 
